@@ -4,7 +4,10 @@ class Table:
     """用于在控制台显示表格的类"""
     JustifyMethod = Literal['right', 'left', 'center']
 
-    def __init__(self):
+    def __init__(self,
+                 title:str=None
+                 ):
+        self.title = title
 
 
     def add_header(
@@ -13,4 +16,3 @@ class Table:
             justify: JustifyMethod="right",
             width: int=None
     ):
-
